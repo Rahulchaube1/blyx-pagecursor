@@ -1,0 +1,14 @@
+use pagecursor;
+
+fn main() {
+    let keys = [1, 4, 7, 9];
+    let cursor = 3.0;
+    let size = 2.0;
+    let result = pagecursor_after(keys, cursor, size);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}
